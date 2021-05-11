@@ -20,7 +20,7 @@
                	var availPinCodeArr = [];
                  var urlDist = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=654&date=11-05-2021";
                  var urlPinCode = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=273008&date=11-05-2021";
-                var waitTimeInSeconds = 6;
+                var waitTimeInSeconds = 4;
                var count = 0;
          var tick = 0;
                function pollDOM () {
@@ -38,7 +38,7 @@
                //		console.log(jsonValue.sessions);
                		jQuery.each(jsonValue.sessions , function(inde, sess){
                	//		console.log(sess.available_capacity);
-               			if(sess.available_capacity > 0 && jQuery.inArray(jsonValue.pincode, availPinCodeArr) == -1){
+               			if(sess.available_capacity > 0 && sess.min_age_limit < 40 && jQuery.inArray(jsonValue.pincode, availPinCodeArr) == -1){
          			       beep();
                				count++;
                				availPinCodeArr.push(jsonValue.pincode);

@@ -2,7 +2,7 @@
 
 ##### Will help you track when slots are opened for different region.
 
-### All you have to do is open the cowin.html 
+### All you have to do is open the cowin.html, leave it open for the day it will keep logging when the slots open for different region.
 
 **before opening the page update these variables(inside the html page) as per your district and date to current date.**
 
